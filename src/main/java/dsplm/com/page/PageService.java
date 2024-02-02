@@ -1,4 +1,4 @@
-package dsplm.module.com.service;
+package dsplm.com.page;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +29,7 @@ public class PageService<T extends OboeVo, F extends OboeObject> extends DsplmSi
     }
     
     public SearchResultDto<Page> getPage(F f) throws Exception {
-        return new SEarchREsultDto<Page>(getPage(pageQueryId, f, f.getPaging().getPageIndex(), f.getPaging().getPageSize(), f.getPaging().getPageUnit()));
+        return new SearchResultDto<Page>(getPage(pageQueryId, f, f.getPaging().getPageIndex(), f.getPaging().getPageSize(), f.getPaging().getPageUnit()));
     }
 
     public List<T> getList(F f) throws Exception {
